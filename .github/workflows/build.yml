@@ -10,7 +10,9 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - uses: android-actions/setup-android@v3
+      - uses: android-actions/setup-android@v4.0.2
+        with:
+          packages: 'platform-tools'
       - name: Unzip and Build
         run: |
           unzip project.zip
